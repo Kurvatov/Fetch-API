@@ -1,0 +1,129 @@
+*{
+    margin:0;
+    outline:0;
+    padding:0;
+    font-family: 'Montserrat', sans-serif;
+}
+html,body{
+    height: 100%;
+}
+.header{
+    display: flex;
+    grid-area: header;
+    background-color: #32a88f;
+    height:4rem;
+}
+.actions{
+    grid-area: actions;
+
+}
+.content{
+    grid-area: _content;
+}
+.footer{
+    display:flex;
+    grid-area: footer;
+    height:4rem;
+    background-color: #d1d1d1;
+}
+.container{
+    display: grid;
+    min-height: 100%;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "actions _content"
+        "footer footer";
+
+    gap: 40px
+}
+.headerTitle{
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+}
+.footerContent{
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+}
+#titleOne{
+    color:white;
+}
+#actionsTitle{
+    text-align: center;
+    margin-bottom: 25px;
+}
+.localRequest ,.apiRequest,.postRequest{
+    margin: 5px;
+    padding: 5px;
+    padding-bottom: 20px;
+   
+}
+.button{
+    width:100px;
+    height:30px;
+    margin-top:15px;
+    margin-left: auto;
+    margin-right:auto;
+    display: block;
+    border-radius:20px;
+    border:unset;
+    cursor: pointer;
+}
+.localButton{
+    background-color:#e4b51c;
+}
+.apiButton{
+    background-color:#2251b4;
+    color:white;
+}
+.postButton,.submitButton{
+    background-color:#325c22;
+    color:white;
+}
+.contentContainer{
+    padding: 30px;
+}
+.card{
+    margin-bottom: 40px;
+}
+.cardHeader{
+    height:2rem;
+    background-color: #d1d1d1;
+}
+.formPost{
+    width:50%;
+    margin-left: auto;
+    margin-right:auto;
+    
+}
+.inputPost{
+    width:100%;
+    height:2.5rem;
+    border-radius:20px;
+    border:0.7px solid grey;
+    padding-left: 10px;
+    padding-right:10px;
+}
+#inputTitle,#inputBody{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+@media (max-width: 450px){
+    .container{
+        grid-template-rows: auto 1fr auto auto;
+        grid-template-areas: 
+            "header header"
+            "actions actions"
+            "_content _content"
+            "footer footer";
+        gap: 0;
+    }
+    .contentContainer{
+        padding-top: 0;
+    }
+}
